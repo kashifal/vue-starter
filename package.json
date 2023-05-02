@@ -11,8 +11,11 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
     "@heroicons/vue": "^2.0.17",
+    "@videojs-player/vue": "^1.0.0",
+    "@vueuse/core": "^10.1.2",
     "pinia": "^2.0.33",
-    "vue": "^3.2.45",
+    "video.js": "^8.3.0",
+    "vue": "^3.2.36",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

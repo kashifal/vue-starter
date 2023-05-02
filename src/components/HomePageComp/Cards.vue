@@ -1,34 +1,34 @@
 <template>
-  <div class="bg-gray-900 py-24 sm:py-16">
+  <router-link to="/podcast" class="bg-gray-900 py-24 sm:py-16">
     <div class="mx-auto max-w-full px-6 text-center lg:px-8">
 
       <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4 lg:gap-8">
         <li v-for="person in people" :key="person.name" class="  bg-gray-800  pb-10 rounded-md overflow-hidden">
-          <img class="mx-auto h-48 w-full   md:h-56 md:w-full object-cover" :src="person.imageUrl" alt="" />
+          <div class="relative">
+            <img class="mx-auto h-48 w-full md:h-56 md:w-full object-cover" :src="person.imageUrl" alt="" />
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+            </svg>
+
+            </div>
+          </div>
+
           <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{{ person.title }}</h3>
           <p class="text-sm leading-6 text-gray-400">{{ person.description }}</p>
-          <ul role="list" class="mt-6 flex justify-center gap-x-6">
-            <li>
-              <a :href="person.twitterUrl" class="text-gray-400 hover:text-gray-300">
-                <span class="sr-only">Twitter</span>
-                <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a :href="person.linkedinUrl" class="text-gray-400 hover:text-gray-300">
-                <span class="sr-only">LinkedIn</span>
-                <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </li>
+          <ul role="list" class="mt-6 flex justify-center gap-x-6 text-white">
+          Play
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+            </svg>
+            
+
           </ul>
         </li>
       </ul>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script setup>
