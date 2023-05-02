@@ -2,11 +2,13 @@
  <div>
 <Header />  
 
+<div class="pb-8">
  <Transition>
  <router-view></router-view>
  </Transition>
 
 
+</div>
  <Footer />
  </div>
  
